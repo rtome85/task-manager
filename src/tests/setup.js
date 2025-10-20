@@ -10,10 +10,10 @@ const prisma = new PrismaClient({
 
 // Clean database before each test
 beforeEach(async () => {
-    await prisma.taskTag.deleteMany();
     await prisma.task.deleteMany();
     await prisma.user.deleteMany();
     await prisma.tag.deleteMany();
+    await prisma.taskTag.deleteMany();
 });
 
 // Close database connection after all tests
