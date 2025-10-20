@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1760989874593" clover="3.2.0">
-  <project timestamp="1760989874593" name="All files">
+<coverage generated="1760990556919" clover="3.2.0">
+  <project timestamp="1760990556920" name="All files">
     <metrics statements="373" coveredstatements="318" conditionals="4089" coveredconditionals="769" methods="1408" coveredmethods="358" elements="5870" coveredelements="1445" complexity="0" loc="373" ncloc="373" packages="9" files="14" classes="14"/>
     <package name="src">
       <metrics statements="27" coveredstatements="25" conditionals="10" coveredconditionals="4" methods="4" coveredmethods="2"/>
@@ -172,7 +172,7 @@
       <metrics statements="50" coveredstatements="32" conditionals="4000" coveredconditionals="711" methods="1376" coveredmethods="330"/>
       <file name="library.js" path="/home/roberto/Work/tutorials/task-manager-api/src/generated/prisma/runtime/library.js">
         <metrics statements="50" coveredstatements="32" conditionals="4000" coveredconditionals="711" methods="1376" coveredmethods="330"/>
-        <line num="4" count="1987" type="cond" truecount="79" falsecount="91"/>
+        <line num="4" count="1986" type="cond" truecount="79" falsecount="91"/>
         <line num="5" count="6" type="cond" truecount="3" falsecount="1"/>
         <line num="6" count="410" type="cond" truecount="59" falsecount="131"/>
         <line num="7" count="132" type="cond" truecount="42" falsecount="148"/>

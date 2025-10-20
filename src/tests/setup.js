@@ -1,14 +1,11 @@
+const path = require('path');
+
+// Load test environment variables from .env.test file FIRST
+require('dotenv').config({ path: path.join(__dirname, '../../.env.test') });
+
+
+// Now import and create Prisma client after env vars are loaded
 const getPrismaClient = require('../database/prisma');
-
-// Set up test environment variables
-process.env.NODE_ENV = 'test';
-process.env.JWT_SECRET = 'test-jwt-secret-key-for-testing-only';
-process.env.JWT_EXPIRES_IN = '1h';
-process.env.RATE_LIMIT_WINDOW_MS = '60000';
-process.env.RATE_LIMIT_MAX_REQUESTS = '1000';
-process.env.LOG_LEVEL = 'error';
-process.env.DATABASE_URL = 'postgresql://neondb_owner:npg_LVywOhb3XF2G@ep-rough-wind-agfx5irm-pooler.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require';
-
 const prisma = getPrismaClient();
 
 
