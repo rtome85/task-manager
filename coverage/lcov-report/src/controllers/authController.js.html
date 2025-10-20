@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">18.75% </span>
+                <span class="strong">93.75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/16</span>
+                <span class='fraction'>15/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">18.75% </span>
+                <span class="strong">93.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/16</span>
+                <span class='fraction'>15/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -125,31 +125,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,14 +139,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,13 +181,13 @@
 const logger = require('../utils/logger');
 &nbsp;
 class AuthController {
-<span class="fstat-no" title="function not covered" >    as</span>ync register(req, res, next) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const { email, password, name } = <span class="cstat-no" title="statement not covered" >req.body;</span>
+    async register(req, res, next) {
+        try {
+            const { email, password, name } = req.body;
 &nbsp;
-            const result = <span class="cstat-no" title="statement not covered" >await authService.register({ email, password, name });</span>
+            const result = await authService.register({ email, password, name });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            res.status(201).json({</span>
+            res.status(201).json({
                 success: true,
                 message: 'User registered successfully',
                 data: {
@@ -196,17 +196,17 @@ class AuthController {
                 }
             });
         } catch (error) {
-<span class="cstat-no" title="statement not covered" >            next(error);</span>
+            next(error);
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    as</span>ync login(req, res, next) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const { email, password } = <span class="cstat-no" title="statement not covered" >req.body;</span>
+    async login(req, res, next) {
+        try {
+            const { email, password } = req.body;
 &nbsp;
-            const result = <span class="cstat-no" title="statement not covered" >await authService.login(email, password);</span>
+            const result = await authService.login(email, password);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            res.status(200).json({</span>
+            res.status(200).json({
                 success: true,
                 message: 'Login successful',
                 data: {
@@ -215,14 +215,14 @@ class AuthController {
                 }
             });
         } catch (error) {
-<span class="cstat-no" title="statement not covered" >            next(error);</span>
+            next(error);
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    as</span>ync getProfile(req, res, next) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
+    async getProfile(req, res, next) {
+        try {
             // User is available from authentication middleware
-<span class="cstat-no" title="statement not covered" >            res.status(200).json({</span>
+            res.status(200).json({
                 success: true,
                 data: {
                     user: req.user
@@ -241,7 +241,7 @@ module.exports = new AuthController();</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-20T00:17:26.380Z
+                at 2025-10-20T19:51:14.432Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

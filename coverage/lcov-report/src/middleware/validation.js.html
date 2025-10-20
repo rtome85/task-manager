@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -225,24 +225,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -382,25 +382,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { body, param, query, validationResult } = require('express-validator');
 &nbsp;
 // Validation error handler
-const handleValidationErrors = <span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {
-    const errors = <span class="cstat-no" title="statement not covered" >validationResult(req);</span>
+const handleValidationErrors = (req, res, next) =&gt; {
+    const errors = validationResult(req);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!errors.isEmpty()) {</span>
-        const formattedErrors = <span class="cstat-no" title="statement not covered" >{};</span>
-<span class="cstat-no" title="statement not covered" >        errors.array().forEach(<span class="fstat-no" title="function not covered" >er</span>ror =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >            if (!formattedErrors[error.path]) {</span>
-<span class="cstat-no" title="statement not covered" >                formattedErrors[error.path] = []</span>
+    if (!errors.isEmpty()) {
+        const formattedErrors = {};
+        errors.array().forEach(error =&gt; {
+            if (!formattedErrors[error.path]) {
+                formattedErrors[error.path] = []
             }
-<span class="cstat-no" title="statement not covered" >            formattedErrors[error.path].push(error.msg);</span>
+            formattedErrors[error.path].push(error.msg);
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return res.status(400).json({</span>
+        return res.status(400).json({
             success: false,
             message: 'Validation failed',
             errors: formattedErrors
         });
     }
-<span class="cstat-no" title="statement not covered" >    next();</span>
+    next();
 };
 &nbsp;
 // Auth validation rules
@@ -544,7 +544,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-20T00:17:26.380Z
+                at 2025-10-20T19:51:14.432Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

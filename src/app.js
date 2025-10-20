@@ -39,6 +39,8 @@ const limiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
+  // Skip rate limiting in test environment
+  skip: (req) => process.env.NODE_ENV === 'test',
 });
 
 app.use(limiter);

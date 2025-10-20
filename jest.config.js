@@ -11,5 +11,6 @@ module.exports = {
         '**/src/**/*.test.js'
     ],
     setupFilesAfterEnv: ['<rootDir>/src/tests/setup.js'],
-    testTimeout: 10000
+    testTimeout: 30000, // Increased timeout for database operations
+    maxWorkers: 1, // Run tests sequentially to avoid database conflicts
 };
