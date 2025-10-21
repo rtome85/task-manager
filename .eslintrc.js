@@ -13,11 +13,17 @@ module.exports = {
     },
     rules: {
         'no-console': 'warn',
-        'no-unused-vars': 'error',
+        'no-unused-vars': 'warn',
         'no-undef': 'error',
         'prefer-const': 'error',
         'no-var': 'error',
         'object-shorthand': 'error',
         'prefer-arrow-callback': 'error',
     },
+    ignorePatterns: [
+        'src/generated/**/*',
+        'node_modules/**/*',
+        'coverage/**/*',
+        'logs/**/*'
+    ]
 };

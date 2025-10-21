@@ -9,7 +9,7 @@ class TaskService {
 
         try {
             // Handle tags if provided
-            let taskTags = [];
+            const taskTags = [];
             if (tags && tags.length > 0) {
                 // Create tags that don't exist and get all tag IDs
                 for (const tagName of tags) {
