@@ -1,6 +1,9 @@
 # Multi-stage build for optimal image size
 FROM node:22-alpine AS base
 
+# Install curl for health checks
+RUN apk add --no-cache curl
+
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /app
@@ -70,7 +73,7 @@ EXPOSE 3000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node healthcheck.js
+  CMD curl -f http://localhost:3000/healthz || exit 1
 
 # Start production server
 CMD ["npm", "start"]
