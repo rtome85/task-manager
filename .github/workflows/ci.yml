@@ -43,10 +43,10 @@ jobs:
         run: npm ci
 
       - name: Generate Prisma client
-        run: npx prisma generate
+        run: npx prisma generate --schema=src/prisma/schema.prisma
 
       - name: Run database migrations
-        run: npx prisma migrate deploy
+        run: npx prisma migrate deploy --schema=src/prisma/schema.prisma
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
